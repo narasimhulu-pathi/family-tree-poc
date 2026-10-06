@@ -23,7 +23,7 @@ function PageLoader() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/family-tree-poc">
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route element={<Layout />}>
