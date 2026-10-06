@@ -1,4 +1,5 @@
 import type { Doctor } from '../../data/doctors'
+import { assetUrl } from '../../utils/asset'
 
 interface DoctorCardProps {
   doctor: Doctor
@@ -9,7 +10,7 @@ export default function DoctorCard({ doctor }: DoctorCardProps) {
     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
       <div className="aspect-[3/4] overflow-hidden bg-primary-light">
         <img
-          src={doctor.photo}
+          src={assetUrl(doctor.photo)}
           alt={doctor.name}
           className="w-full h-full object-cover object-top"
           loading="lazy"

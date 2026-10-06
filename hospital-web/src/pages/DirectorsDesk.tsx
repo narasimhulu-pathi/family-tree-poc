@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { hospital } from '../data/hospital'
+import { assetUrl } from '../utils/asset'
 
 export default function DirectorsDesk() {
   return (
@@ -25,7 +26,7 @@ export default function DirectorsDesk() {
               <div className="shrink-0">
                 <div className="w-32 h-32 rounded-2xl overflow-hidden bg-surface">
                   <img
-                    src="/images/doctors/dr-shravan.jpeg"
+                    src={assetUrl('/images/doctors/dr-shravan.jpeg')}
                     alt="Dr. Shravan Krishna Reddy P"
                     className="w-full h-full object-cover object-top"
                   />

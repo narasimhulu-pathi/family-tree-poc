@@ -1,4 +1,5 @@
 import { hospital } from '../../data/hospital'
+import { assetUrl } from '../../utils/asset'
 import Button from '../ui/Button'
 
 export default function HeroBanner() {
@@ -7,7 +8,7 @@ export default function HeroBanner() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero.jpeg"
+          src={assetUrl('/images/hero.jpeg')}
           alt="Family Tree Hospital"
           className="w-full h-full object-cover object-center"
         />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 import { hospital } from '../../data/hospital'
+import { assetUrl } from '../../utils/asset'
 import Button from '../ui/Button'
 
 const navLinks = [
@@ -60,7 +61,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" onClick={closeMobile} className="flex items-center gap-2 shrink-0">
-          <img src="/images/logo.png" alt="The Family Tree Hospital" className="h-10 w-auto" />
+          <img src={assetUrl('/images/logo.png')} alt="The Family Tree Hospital" className="h-10 w-auto" />
           <span className="font-heading font-bold text-primary text-sm leading-tight hidden sm:block">
             The Family Tree<br />Hospital
           </span>

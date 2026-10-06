@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { galleryImages } from '../data/gallery'
+import { assetUrl } from '../utils/asset'
 import { hospital } from '../data/hospital'
 
 const categories = ['All', ...Array.from(new Set(galleryImages.map((g) => g.category)))]
@@ -61,7 +62,7 @@ export default function Gallery() {
                 onClick={() => openLightbox(index)}
               >
                 <img
-                  src={image.src}
+                  src={assetUrl(image.src)}
                   alt={image.alt}
                   loading="lazy"
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
@@ -93,7 +94,7 @@ export default function Gallery() {
             <ChevronLeft className="w-10 h-10" />
           </button>
           <img
-            src={filtered[lightboxIndex].src}
+            src={assetUrl(filtered[lightboxIndex].src)}
             alt={filtered[lightboxIndex].alt}
             className="max-h-[85vh] max-w-full object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}

@@ -3,6 +3,7 @@ import { CheckCircle2 } from 'lucide-react'
 import SectionHeading from '../components/ui/SectionHeading'
 import Button from '../components/ui/Button'
 import { hospital } from '../data/hospital'
+import { assetUrl } from '../utils/asset'
 
 const values = [
   { title: 'Patient-First Care', description: 'Every decision we make centers on the well-being of our patients and their families.' },
@@ -53,7 +54,7 @@ export default function About() {
             </div>
             <div className="bg-surface rounded-2xl overflow-hidden aspect-video lg:aspect-square">
               <img
-                src="/images/hero.jpeg"
+                src={assetUrl('/images/hero.jpeg')}
                 alt="Family Tree Hospital facility"
                 className="w-full h-full object-cover"
               />

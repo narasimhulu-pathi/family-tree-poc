@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import { assetUrl } from '../../utils/asset'
 import { hospital } from '../../data/hospital'
 
 const quickLinks = [
@@ -22,7 +23,7 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/images/logo.png" alt="The Family Tree Hospital" className="h-12 w-auto" />
+              <img src={assetUrl('/images/logo.png')} alt="The Family Tree Hospital" className="h-12 w-auto" />
               <span className="font-heading font-bold text-lg leading-tight">
                 The Family Tree<br />Hospital
               </span>
